@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="vaeid" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>blank</title>
+    <style>
+      #p1::first-letter {
+        font-size: 40px;
+        color: blue;
+      }
+      #p2::first-line {
+        font-size: 40px;
+        color: red;
+      }
+      #p3::before {
+        content: url('images.png');
+        width: 12px;
+        height: 12px;
+      }
+      #p4::after {
+        content: '...';
+      }
+      #p5::before {
+        content: '---->';
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="p1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita perferendis saepe quibusdam atque odit
+      praesentium!
+    </p>
+    <p id="p2">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita perferendis saepe quibusdam atque odit
+      praesentium!
+    </p>
+    <p id="p3">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita perferendis saepe quibusdam atque odit
+      praesentium!
+    </p>
+    <p id="p4">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita perferendis saepe quibusdam atque odit
+      praesentium!
+    </p>
+    <p id="p5">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita perferendis saepe quibusdam atque odit
+      praesentium!
+    </p>
+  </body>
+</html>
