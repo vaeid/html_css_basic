@@ -4,48 +4,90 @@
     <meta charset="UTF-8" />
     <meta name="author" content="vaeid" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>blank</title>
+    <title>مثال‌های Pseudo Class</title>
     <style>
+      /* لینک‌های بازدید شده */
       a:visited {
-        color: grey;
+        color: grey; /* رنگ لینک‌های بازدید شده */
       }
+      /* لینک‌ها در حالت هاور */
       a:hover {
-        font-weight: bold;
-        color: red;
-        font-size: 30px;
+        font-weight: bold; /* ضخیم شدن فونت */
+        color: red; /* تغییر رنگ */
+        font-size: 30px; /* تغییر اندازه فونت */
+      }
+      /* لینک‌ها در حالت فوکوس */
+      a:focus {
+        outline: none; /* حذف حاشیه پیش‌فرض */
+        background-color: yellow; /* تغییر پس‌زمینه */
+      }
+      /* لینک‌ها در حالت فعال */
+      a:active {
+        color: blue; /* تغییر رنگ */
       }
 
+      /* انتخاب آخرین فرزند در بخش والد */
       .parent :last-child {
-        color: green;
+        color: green; /* رنگ آخرین فرزند */
       }
+      /* انتخاب اولین فرزند در بخش والد */
       .parent :first-child {
-        color: blue;
+        color: blue; /* رنگ اولین فرزند */
       }
+      /* انتخاب اولین نوع فرزند در بخش والد */
       .parent :first-of-type {
-        background-color: red;
+        background-color: red; /* تغییر پس‌زمینه */
       }
+      /* انتخاب آخرین نوع فرزند در بخش والد */
       .parent :last-of-type {
-        background-color: gold;
+        background-color: gold; /* تغییر پس‌زمینه */
       }
+      /* انتخاب فرزندان زوج لیست */
       ul :nth-child(even) {
-        background-color: greenyellow;
+        background-color: greenyellow; /* تغییر پس‌زمینه */
       }
+      /* انتخاب فرزندان فرد لیست */
       ul :nth-child(odd) {
-        background-color: pink;
+        background-color: pink; /* تغییر پس‌زمینه */
       }
+      /* انتخاب هر سومین فرزند لیست */
       ul :nth-child(3n) {
-        background-color: red;
+        background-color: red; /* تغییر پس‌زمینه */
+      }
+      /* انتخاب چک باکس‌های انتخاب شده */
+      input[type='checkbox']:checked {
+        background-color: lightgreen; /* تغییر پس‌زمینه */
+      }
+      /* انتخاب دومین عنصر لیست */
+      ul li:nth-of-type(2) {
+        color: orange; /* تغییر رنگ دومین عنصر */
+      }
+      /* انتخاب تمام عناصر به جز اولین عنصر لیست */
+      ul li:not(:first-child) {
+        color: grey; /* تغییر رنگ */
       }
     </style>
   </head>
   <body>
-    <a href="#">Link !!!!</a>
+    <h1>مثال‌های Pseudo Class</h1>
+
+    <h2>لینک‌ها</h2>
+    <a href="#">لینک معمولی</a><br />
+    <!-- Normal link -->
+    <a href="#" tabindex="0">لینک با فوکوس</a><br />
+    <!-- Link with focus -->
+    <a href="#" onclick="alert('Clicked!')">لینک فعال</a>
+    <!-- Active link -->
+
+    <h2>بخش والد</h2>
     <section class="parent">
       <h2>Heading - 2</h2>
       <h2>Heading - 2-2</h2>
       <p>Lorem ipsum dolor sit.</p>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     </section>
+
+    <h2>لیست</h2>
     <ul>
       <li>item 1</li>
       <li>item 2</li>
@@ -54,5 +96,9 @@
       <li>item 5</li>
       <li>item 6</li>
     </ul>
+
+    <h2>چک باکس</h2>
+    <input type="checkbox" id="check1" /> چک باکس مثال<br />
+    <!-- Checkbox example -->
   </body>
 </html>

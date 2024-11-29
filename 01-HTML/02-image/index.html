@@ -1,23 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="fa">
   <head>
-    <title>عنوان سایت</title>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>آموزش کار با عکس‌ها در HTML</title>
     <style>
       .picture {
-        width: 300px;
-        height: 300px;
-        background-color: gold;
-        object-fit: cover;
-        object-position: top center;
+        width: 300px; /* عرض تصویر */
+        height: 300px; /* ارتفاع تصویر */
+        background-color: gold; /* رنگ پس‌زمینه */
+        object-fit: cover; /* نحوه‌ی نمایش تصویر */
+        object-position: top center; /* موقعیت تصویر */
       }
     </style>
   </head>
   <body>
     <h1>عنوان صفحه</h1>
     <p>گوشی سامسونگ Galaxy A53 5G</p>
-    <img src="picture.jpg" />
+
+    <!-- تگ img برای نمایش تصویر -->
+    <img src="picture.jpg" alt="تصویری از گوشی سامسونگ Galaxy A53 5G" />
     <br />
-    <img src="1.png" class="picture" />
+
+    <!-- تصویر با کلاس برای استایل -->
+    <img src="1.png" class="picture" alt="تصویری با استایل خاص" />
+
+    <h2>توضیحات درباره تگ &lt;img&gt;</h2>
+    <p>
+      تگ <code>&lt;img&gt;</code> برای نمایش تصاویر در صفحات وب استفاده می‌شود. این تگ به صورت خودبسته است و نیازی به تگ
+      بسته ندارد. برخی از ویژگی‌های مهم این تگ عبارتند از:
+    </p>
+    <ul>
+      <li><strong>src:</strong> آدرس تصویر (URL) که می‌خواهید نمایش دهید.</li>
+      <li>
+        <strong>alt:</strong> متن جایگزین برای تصویر. این متن در صورتی که تصویر بارگذاری نشود یا برای کاربران با
+        ناتوانی‌های بصری نمایش داده می‌شود.
+      </li>
+      <li><strong>width و height:</strong> برای تعیین ابعاد تصویر (اختیاری).</li>
+      <li><strong>class:</strong> برای اضافه کردن استایل‌های CSS به تصویر (اختیاری).</li>
+    </ul>
+
+    <h2>حالت‌های دیگر تگ &lt;img&gt;</h2>
+    <p>می‌توانید از ویژگی‌های دیگر تگ <code>&lt;img&gt;</code> نیز استفاده کنید:</p>
+    <ul>
+      <li>استفاده از <code>style</code> برای اضافه کردن استایل‌های inline.</li>
+      <li>استفاده از <code>title</code> برای نمایش توضیحات اضافی هنگام قرار دادن ماوس بر روی تصویر.</li>
+      <li>استفاده از <code>loading</code> برای کنترل بارگذاری تصویر (مثل <code>lazy</code> برای بارگذاری تنبل).</li>
+    </ul>
   </body>
 </html>

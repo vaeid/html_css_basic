@@ -4,64 +4,91 @@
     <meta charset="UTF-8" />
     <meta name="author" content="vaeid" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>blank</title>
+    <title>مثال انتخاب‌گرهای رابطه‌ای در CSS</title>
     <style>
+      /* انتخاب همه پاراگراف‌ها و تغییر رنگ متن به آبی */
       p {
-        color: blue;
+        color: blue; /* All paragraphs will be blue */
       }
+      /* انتخاب پاراگراف‌های داخل کلاس parent1 و تغییر رنگ به قرمز */
       .parent1 p {
-        color: red;
+        color: red; /* Paragraphs inside .parent1 will be red */
       }
+      /* انتخاب پاراگراف‌های بعد از کلاس parent1 و تغییر رنگ به سبز زرد */
       .parent1 ~ p {
-        color: greenyellow;
+        color: greenyellow; /* Sibling paragraphs after .parent1 will be greenyellow */
       }
+      /* انتخاب پاراگراف‌های فرزند مستقیم کلاس parent2 و تغییر رنگ به طلایی */
       .parent2 > p {
-        color: gold;
+        color: gold; /* Direct child paragraphs of .parent2 will be gold */
       }
+      /* انتخاب پاراگراف بعدی بعد از کلاس parent2 و تغییر رنگ به قهوه‌ای */
       .parent2 + p {
-        color: brown;
+        color: brown; /* The paragraph immediately after .parent2 will be brown */
       }
     </style>
   </head>
-  <body>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+  <body dir="rtl">
+    <!-- پاراگراف اول -->
+    <p>این یک متن نمونه است که رنگ آن آبی است. (این رنگ به دلیل عدم وجود کلاس خاصی است.)</p>
+    <!-- This is a sample text that is blue. (This color is due to the absence of any specific class.) -->
     <hr />
     <section>
       <article class="parent1">
-        <p>1 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p>2 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>
+          پاراگراف ۱: این متن قرمز است زیرا درون کلاس parent1 قرار دارد و استایل مربوط به این کلاس بر آن اعمال شده است.
+        </p>
+        <!-- Paragraph 1: This text is red because it is inside the parent1 class, and the style for this class is applied to it. -->
+        <p>پاراگراف ۲: این متن نیز قرمز است زیرا درون کلاس parent1 قرار دارد.</p>
+        <!-- Paragraph 2: This text is also red because it is inside the parent1 class. -->
         <section>
-          <p>3 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p>پاراگراف ۳: این متن درون یک بخش است و رنگ آن نیز قرمز است زیرا درون کلاس parent1 است.</p>
+          <!-- Paragraph 3: This text is in a section and is blue because it is not inside the parent1 class. -->
         </section>
-        <p>4 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>پاراگراف ۴: این متن قرمز است زیرا درون کلاس parent1 قرار دارد.</p>
+        <!-- Paragraph 4: This text is red because it is inside the parent1 class. -->
       </article>
-      <p>5 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <p>پاراگراف ۵: این متن سبز است زیرا بعد از کلاس parent1 قرار دارد و استایل خواهر عمومی بر آن اعمال شده است.</p>
+      <!-- Paragraph 5: This text is greenyellow because it follows the parent1 class, and the general sibling style is applied to it. -->
 
-      <p>6 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <p>پاراگراف ۶: این متن سبز است چون بعد از المنت با کلاس parent1 قرار گرفته است زیرا درون هیچ کلاس خاصی نیست.</p>
+      <!-- Paragraph 6: This text is blue because it is not inside any specific class. -->
       <div>
-        <p>7 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>پاراگراف ۷: این متن آبی است و درون یک div قرار دارد، بنابراین رنگ آن تحت تأثیر استایل‌های عمومی است.</p>
+        <!-- Paragraph 7: This text is blue and is inside a div, so its color is affected by the general styles. -->
       </div>
-      <p>8 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <p>پاراگراف ۶: این متن سبز است چون بعد از المنت با کلاس parent1 قرار گرفته است زیرا درون هیچ کلاس خاصی نیست.</p>
+      <!-- Paragraph 8: This text is blue because it is not inside any specific class. -->
     </section>
     <hr />
     <section>
       <article class="parent2">
-        <p>1 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p>2 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>
+          پاراگراف ۱: این متن طلایی است زیرا درون کلاس parent2 قرار دارد و استایل مربوط به این کلاس بر آن اعمال شده است.
+        </p>
+        <!-- Paragraph 1: This text is gold because it is inside the parent2 class, and the style for this class is applied to it. -->
+        <p>پاراگراف ۲: این متن نیز طل ایی است زیرا درون کلاس parent2 قرار دارد.</p>
+        <!-- Paragraph 2: This text is also gold because it is inside the parent2 class. -->
         <section>
-          <p>3 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p>پاراگراف ۳: این متن درون یک بخش است و رنگ آن آبی است زیرا درون کلاس parent2 نیست.</p>
+          <!-- Paragraph 3: This text is in a section and is blue because it is not inside the parent2 class. -->
         </section>
-        <p>4 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>پاراگراف ۴: این متن طلایی است زیرا درون کلاس parent2 قرار دارد.</p>
+        <!-- Paragraph 4: This text is gold because it is inside the parent2 class. -->
       </article>
-      <p>5 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <p>
+        پاراگراف ۵: این متن قهوه ای است زیرا بعد از کلاس parent2 قرار دارد و استایل خواهر عمومی بر آن اعمال شده است.
+      </p>
+      <!-- Paragraph 5: This text is greenyellow because it follows the parent2 class, and the general sibling style is applied to it. -->
 
-      <p>6 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <p>پاراگراف ۶: این متن آبی است زیرا درون هیچ کلاس خاصی نیست.</p>
+      <!-- Paragraph 6: This text is blue because it is not inside any specific class. -->
       <div>
-        <p>7 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>پاراگراف ۷: این متن آبی است و درون یک div قرار دارد، بنابراین رنگ آن تحت تأثیر استایل‌های عمومی است.</p>
+        <!-- Paragraph 7: This text is blue and is inside a div, so its color is affected by the general styles. -->
       </div>
-      <p>8 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <p>پاراگراف ۸: این متن آبی است زیرا درون هیچ کلاس خاصی نیست.</p>
+      <!-- Paragraph 8: This text is blue because it is not inside any specific class. -->
     </section>
-
-    
   </body>
 </html>

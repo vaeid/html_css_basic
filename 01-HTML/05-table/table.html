@@ -4,60 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="author" content="vaeid" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>table</title>
+    <title>جدول کاربران</title>
     <style>
       table,
       td,
       th {
-        border: 1px solid gray;
-        border-collapse: collapse;
-        text-align: center;
+        border: 1px solid gray; /* حاشیه جدول / Table border */
+        border-collapse: collapse; /* ادغام حاشیه‌ها / Collapse borders */
+        text-align: center; /* تراز کردن متن به مرکز / Center align text */
       }
     </style>
   </head>
   <body>
     <table>
       <thead>
-        <!-- table header -->
+        <!-- سر جدول / Table header -->
         <tr>
-          <!-- table row -->
-          <th colspan="4">my users data</th>
+          <th colspan="4">اطلاعات کاربران من</th>
+          <!-- عنوان جدول / Table title -->
         </tr>
         <tr>
-          <!-- table row -->
-          <th>Id</th>
-          <!-- table header data (cell) -->
-          <th>First name</th>
-          <th>Last name</th>
-          <th>Age</th>
+          <th>شناسه</th>
+          <!-- ستون شناسه / ID column -->
+          <th>نام</th>
+          <!-- ستون نام / First name column -->
+          <th>نام خانوادگی</th>
+          <!-- ستون نام خانوادگی / Last name column -->
+          <th>سن</th>
+          <!-- ستون سن / Age column -->
         </tr>
       </thead>
       <tbody>
-        <!-- table body -->
+        <!-- بدنه جدول / Table body -->
         <tr>
-          <td>
-            <!-- table data -->
-            1
-          </td>
-          <td>vahid</td>
-          <td>mohamadi</td>
+          <td>1</td>
+          <td>وحید</td>
+          <td>محمدی</td>
           <td>33</td>
         </tr>
-        <!-- table body -->
         <tr>
-          <td>
-            <!-- table data -->
-            1
-          </td>
-          <td>saeid</td>
-          <td>ahmadi</td>
+          <td>2</td>
+          <!-- شناسه دوم باید 2 باشد / The second ID should be 2 -->
+          <td>سعید</td>
+          <td>احمدی</td>
           <td>36</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <th colspan="2">total user</th>
+          <th colspan="2">تعداد کل کاربران</th>
+          <!-- تعداد کل کاربران / Total number of users -->
           <th colspan="2">2</th>
+          <!-- تعداد کاربران / Number of users -->
         </tr>
       </tfoot>
     </table>

@@ -4,27 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="author" content="vaeid" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>blank</title>
+    <title>Examples of Pseudo Elements</title>
     <style>
+      /* تغییر ظاهر اولین حرف پاراگراف با ID p1 */
       #p1::first-letter {
-        font-size: 40px;
-        color: blue;
+        font-size: 50px; /* اندازه بزرگتر */
+        color: darkgreen; /* رنگ سبز تیره */
+        font-weight: bold; /* پررنگ کردن */
       }
+
+      /* تغییر ظاهر اولین خط پاراگراف با ID p2 */
       #p2::first-line {
-        font-size: 40px;
-        color: red;
+        font-size: 24px; /* اندازه بزرگتر */
+        font-style: italic; /* ایتالیک */
+        color: darkorange; /* رنگ نارنجی تیره */
       }
+
+      /* اضافه کردن آیکون قبل از عنوان پاراگراف با ID p3 */
       #p3::before {
-        content: url('images.png');
-        width: 12px;
-        height: 12px;
+        content: '🔔 '; /* آیکون زنگ */
+        font-size: 20px; /* اندازه آیکون */
       }
+
+      /* اضافه کردن متن 'پایان' بعد از پاراگراف با ID p4 */
       #p4::after {
-        content: '...';
+        content: ' (پایان)'; /* متن فارسی */
+        font-weight: bold; /* پررنگ کردن */
+        color: red; /* رنگ قرمز */
       }
+
+      /* اضافه کردن خط افقی قبل از پاراگراف با ID p5 */
       #p5::before {
-        content: '---->';
-        color: blue;
+        content: ''; /* محتوای خالی */
+        display: block; /* نمایش به صورت بلوک */
+        width: 100%; /* عرض کامل */
+        height: 2px; /* ارتفاع خط */
+        background-color: blue; /* رنگ خط */
+        margin-bottom: 10px; /* فاصله از پاراگراف */
+      }
+
+      /* تغییر ظاهر متن انتخاب شده */
+      ::selection {
+        background-color: lightblue; /* رنگ پس‌زمینه انتخاب */
+        color: black; /* رنگ متن انتخاب شده */
       }
     </style>
   </head>

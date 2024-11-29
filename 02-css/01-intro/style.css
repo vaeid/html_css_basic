@@ -1,9 +1,14 @@
+/* استایل برای پاراگراف‌ها / Styles for paragraphs */
 p {
-  font-size: 30px;
+  font-size: 30px; /* اندازه فونت / Font size */
 }
+
+/* استایل برای کلاس خارجی / Styles for external class */
 .external-class {
-  background-color: brown;
+  background-color: brown; /* رنگ پس‌زمینه / Background color */
 }
+
+/* استایل برای ID خاص / Styles for specific ID */
 #my_text {
-  background-color: blue;
+  background-color: blue; /* رنگ پس‌زمینه / Background color */
 }
