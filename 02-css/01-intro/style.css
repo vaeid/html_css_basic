@@ -1,0 +1,9 @@
+p {
+  font-size: 30px;
+}
+.external-class {
+  background-color: brown;
+}
+#my_text {
+  background-color: blue;
+}
