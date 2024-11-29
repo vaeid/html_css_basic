@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="vaeid" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>blank</title>
+    <style>
+      p {
+        color: blue;
+      }
+      .parent1 p {
+        color: red;
+      }
+      .parent1 ~ p {
+        color: greenyellow;
+      }
+      .parent2 > p {
+        color: gold;
+      }
+      .parent2 + p {
+        color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <hr />
+    <section>
+      <article class="parent1">
+        <p>1 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>2 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <section>
+          <p>3 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </section>
+        <p>4 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </article>
+      <p>5 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+      <p>6 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <div>
+        <p>7 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <p>8 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </section>
+    <hr />
+    <section>
+      <article class="parent2">
+        <p>1 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>2 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <section>
+          <p>3 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </section>
+        <p>4 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </article>
+      <p>5 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+      <p>6 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <div>
+        <p>7 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <p>8 Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </section>
+
+    
+  </body>
+</html>
